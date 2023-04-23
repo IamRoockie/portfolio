@@ -1,0 +1,17 @@
+$bg: #040c18;
+$footer: #031b34;
+$text: #81afdd;
+$light: #ffffff;
+$alt: #ff8a71;
+$primary: #ae67fa;
+$gradient-text: linear-gradient(90deg, $primary 1.85%, $alt 103%);
+$gradient-bg: radial-gradient(
+  circle at 3% 25%,
+  rgba(0, 40, 83, 1) 0%,
+  rgba(4, 12, 24, 1) 100%
+);
+@mixin gradient-text {
+  background: $gradient-text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
