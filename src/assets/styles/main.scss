@@ -2,54 +2,54 @@
 @import "vars";
 
 :root {
-  font-family: Manrope, system-ui, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+  font-family              : Manrope, system-ui, sans-serif;
+  line-height              : 1.5;
+  font-weight              : 400;
+  font-synthesis           : none;
+  text-rendering           : optimizeLegibility;
+  -webkit-font-smoothing   : antialiased;
+  -moz-osx-font-smoothing  : grayscale;
+  -webkit-text-size-adjust : 100%;
 }
 
 *,
 *::after,
 *::before {
-  margin: 0;
-  padding: 0;
-  outline: none;
-  box-sizing: border-box;
-  user-select: none;
+  margin      : 0;
+  padding     : 0;
+  outline     : none;
+  box-sizing  : border-box;
+  user-select : none;
 }
 
 #app {
-  min-height: 100vh;
-  padding: 50px 0;
-  background: $gradient-bg;
+  min-height : 100vh;
+  padding    : 50px 0;
+  background : $gradient-bg;
 }
 
 a {
-  font: inherit;
-  color: inherit;
-  text-decoration: inherit;
+  font            : inherit;
+  color           : inherit;
+  text-decoration : inherit;
 }
 
 input,
 button,
 textarea,
 select {
-  font: inherit;
+  font : inherit;
 }
 
 ul {
-  list-style: none;
+  list-style : none;
 }
 
 @keyframes scale-up {
   from {
-    transform: scale(0.5);
+    transform : scale(0.5);
   }
   to {
-    transform: scale(1);
+    transform : scale(1);
   }
 }

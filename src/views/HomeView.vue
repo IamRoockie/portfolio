@@ -2,11 +2,6 @@
 import { useLocale } from '@/stores/locale'
 
 const store = useLocale()
-const devs = [
-  'Fronted Developer',
-  'Fullstack Developer',
-  'Backend Developer'
-]
 </script>
 
 <script>
@@ -44,11 +39,11 @@ export default {
 </template>
 
 <style scoped lang='scss'>
-.home {
-  margin-top      : 60px;
-  display         : flex;
-  justify-content : space-between;
-  align-items     : center;
+.content {
+  display        : flex;
+  flex-direction : column;
+  align-items    : start;
+  row-gap        : 20px;
 }
 
 .title {
@@ -58,8 +53,7 @@ export default {
 }
 
 .typing-wrapper {
-  margin-top : 20px;
-  height     : 70px;
+  height : 65px;
 }
 
 .typing-gradient {
@@ -72,14 +66,13 @@ export default {
 }
 
 .text {
-  margin-top : 20px;
-  max-width  : 500px;
-  color      : $text;
+  max-width : 500px;
+  color     : $text;
 }
 
 .download {
+  margin-top       : 20px;
   display          : inline-block;
-  margin-top       : 50px;
   padding          : 15px 25px;
   border           : none;
   border-radius    : 10px;
@@ -103,5 +96,57 @@ export default {
 .img {
   width      : 100%;
   object-fit : cover;
+}
+
+@media (max-width : 1024px) {
+  .home {
+    flex-direction  : column;
+    justify-content : center;
+  }
+  .content {
+    align-items : center;
+  }
+  .text {
+    text-align : center;
+  }
+  .img-wrapper {
+    display : none;
+  }
+}
+
+@media (max-width : 700px) {
+  .title {
+    font-size : 45px;
+  }
+  .typing-wrapper {
+    height : 50px;
+  }
+  .typing {
+    font-size : 30px;
+  }
+  .text {
+    font-size : 14px;
+  }
+  .download {
+    font-size : 16px;
+  }
+}
+
+@media (max-width : 500px) {
+  .title {
+    font-size : 30px;
+  }
+  .typing-wrapper {
+    height : 30px;
+  }
+  .typing {
+    font-size : 20px;
+  }
+  .text {
+    font-size : 10px;
+  }
+  .download {
+    font-size : 12px;
+  }
 }
 </style>
