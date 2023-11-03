@@ -11,28 +11,27 @@ export default {
     },
     groups: [
       {
-        name: 'frontend',
+        name: 'backend',
         skills: [
-          { name: 'HTML / CSS', progress: 80 },
-          { name: 'JavaScript', progress: 85 },
-          { name: 'TypeScript', progress: 50 },
-          { name: 'Vue', progress: 65 },
-          { name: 'React', progress: 50 }
+          { name: 'PHP', progress: 85 },
+          { name: 'C#', progress: 50 },
+          { name: 'Golang', progress: 50 }
         ]
       },
       {
-        name: 'backend',
+        name: 'frontend',
         skills: [
-          { name: 'PHP', progress: 50 },
-          { name: 'C#', progress: 40 },
-          { name: 'Java', progress: 40 }
+          { name: 'HTML / CSS', progress: 85 },
+          { name: 'JavaScript', progress: 80 },
+          { name: 'Vue', progress: 70 },
+          { name: 'React', progress: 50 }
         ]
       },
       {
         name: 'database',
         skills: [
-          { name: 'MySQL', progress: 50 },
-          { name: 'PostgreSQL', progress: 40 }
+          { name: 'MySQL', progress: 65 },
+          { name: 'MongoDB', progress: 30 },
         ]
       }
     ]
@@ -61,17 +60,10 @@ export default {
         <div class='skills__group' v-for='group in groups' :key='group.name'>
           <h2 class='skills__group-name'>{{ group.name }}:</h2>
           <div class='skills__progress'>
-            <div
-              class='skills__item'
-              v-for='skill in group.skills'
-              :key='skill.name'>
+            <div class='skills__item' v-for='skill in group.skills' :key='skill.name'>
               <span class='skills__item-name'>{{ skill.name }}</span>
-              <circle-progress-bar
-                :percentage='skill.progress'
-                :radius='skillProgress.radius'
-                :stroke='skillProgress.stroke'
-                bar-color='#ae67fa'
-              />
+              <circle-progress-bar :percentage='skill.progress' :radius='skillProgress.radius'
+                :stroke='skillProgress.stroke' bar-color='#ae67fa' />
             </div>
           </div>
         </div>
@@ -82,42 +74,42 @@ export default {
 
 <style scoped lang='scss'>
 .skills {
-  text-align : center;
+  text-align: center;
 
   &__inner {
-    display        : flex;
-    flex-direction : column;
-    row-gap        : 70px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 70px;
   }
 
   &__group {
-    display     : flex;
-    align-items : center;
+    display: flex;
+    align-items: center;
 
     &-name {
-      width          : 250px;
-      text-align     : left;
-      font-size      : 40px;
-      text-transform : capitalize;
+      width: 250px;
+      text-align: left;
+      font-size: 40px;
+      text-transform: capitalize;
       @include gradient-text;
     }
   }
 
   &__progress {
-    display    : flex;
-    column-gap : 70px;
+    display: flex;
+    column-gap: 70px;
   }
 
   &__item {
-    display        : flex;
-    flex-direction : column;
-    align-items    : center;
-    row-gap        : 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
 
     &-name {
-      width       : 120px;
-      font-size   : 18px;
-      font-weight : 500;
+      width: 120px;
+      font-size: 18px;
+      font-weight: 500;
     }
   }
 }
@@ -126,43 +118,44 @@ export default {
   .skills {
     &__group {
       &-name {
-        width     : 170px;
-        font-size : 30px;
+        width: 170px;
+        font-size: 30px;
       }
     }
 
     &__progress {
-      column-gap : 20px;
+      column-gap: 20px;
     }
   }
 }
 
 @media (max-width : 900px) {
   .profile {
-    margin-top      : 30px;
-    justify-content : center;
+    margin-top: 30px;
+    justify-content: center;
   }
+
   .skills__group {
-    row-gap        : 30px;
-    flex-direction : column;
+    row-gap: 30px;
+    flex-direction: column;
 
     &-name {
-      width : auto;
+      width: auto;
     }
   }
 }
 
 @media (max-width : 700px) {
   .skills__progress {
-    display               : grid;
-    grid-template-columns : repeat(3, 1fr);
-    row-gap               : 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 30px;
   }
 }
 
 @media (max-width : 420px) {
   .skills__progress {
-    grid-template-columns : repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 </style>
