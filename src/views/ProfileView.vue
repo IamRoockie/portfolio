@@ -13,7 +13,8 @@ export default {
       {
         name: 'backend',
         skills: [
-          { name: 'PHP', progress: 85 },
+          { name: 'PHP', progress: 90 },
+          { name: 'Laravel', progress: 85 },
           { name: 'C#', progress: 50 },
           { name: 'VLang', progress: 20 }
         ]
@@ -21,18 +22,18 @@ export default {
       {
         name: 'frontend',
         skills: [
-          { name: 'HTML / CSS', progress: 85 },
-          { name: 'JavaScript', progress: 70 },
-          { name: 'Vue', progress: 60 },
-          { name: 'React', progress: 30 }
+          { name: 'Tailwind', progress: 85 },
+          { name: 'Alpine.js', progress: 85 },
+          { name: 'JavaScript', progress: 75 },
+          { name: 'Vue', progress: 50 }
         ]
       },
       {
         name: 'database',
         skills: [
-          { name: 'MySQL', progress: 65 },
-          { name: 'Redis', progress: 50 },
-          { name: 'MongoDB', progress: 30 }
+          { name: 'MySQL', progress: 85 },
+          { name: 'Redis', progress: 60 },
+          { name: 'MongoDB', progress: 35 }
         ]
       }
     ]
