@@ -1,6 +1,6 @@
 # Vitaly Timoshenko
 
-[LIVE](http://vitaly2x.beget.tech/)
+[LIVE](http://vitaly2x.beget.tech)
 
 ## Project Setup
 
