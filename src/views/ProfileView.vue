@@ -15,23 +15,24 @@ export default {
         skills: [
           { name: 'PHP', progress: 85 },
           { name: 'C#', progress: 50 },
-          { name: 'Golang', progress: 50 }
+          { name: 'VLang', progress: 20 }
         ]
       },
       {
         name: 'frontend',
         skills: [
           { name: 'HTML / CSS', progress: 85 },
-          { name: 'JavaScript', progress: 80 },
-          { name: 'Vue', progress: 70 },
-          { name: 'React', progress: 50 }
+          { name: 'JavaScript', progress: 70 },
+          { name: 'Vue', progress: 60 },
+          { name: 'React', progress: 30 }
         ]
       },
       {
         name: 'database',
         skills: [
           { name: 'MySQL', progress: 65 },
-          { name: 'MongoDB', progress: 30 },
+          { name: 'Redis', progress: 50 },
+          { name: 'MongoDB', progress: 30 }
         ]
       }
     ]
@@ -54,16 +55,17 @@ export default {
 </script>
 
 <template>
-  <section class='profile'>
-    <div class='skills'>
-      <div class='skills__inner'>
-        <div class='skills__group' v-for='group in groups' :key='group.name'>
-          <h2 class='skills__group-name'>{{ group.name }}:</h2>
-          <div class='skills__progress'>
-            <div class='skills__item' v-for='skill in group.skills' :key='skill.name'>
-              <span class='skills__item-name'>{{ skill.name }}</span>
-              <circle-progress-bar :percentage='skill.progress' :radius='skillProgress.radius'
-                :stroke='skillProgress.stroke' bar-color='#ae67fa' />
+  <section class="profile">
+    <div class="skills">
+      <div class="skills__inner">
+        <div class="skills__group" v-for="group in groups" :key="group.name">
+          <h2 class="skills__group-name">{{ group.name }}:</h2>
+          <div class="skills__progress">
+            <div class="skills__item" v-for="skill in group.skills" :key="skill.name">
+              <span class="skills__item-name">{{ skill.name }}</span>
+              <circle-progress-bar :percentage="skill.progress" :radius="skillProgress.radius"
+                :stroke="skillProgress.stroke" bar-color="#ae67fa"
+              />
             </div>
           </div>
         </div>
@@ -72,7 +74,7 @@ export default {
   </section>
 </template>
 
-<style scoped lang='scss'>
+<style scoped lang="scss">
 .skills {
   text-align: center;
 
@@ -114,7 +116,7 @@ export default {
   }
 }
 
-@media (max-width : 1200px) {
+@media (max-width: 1200px) {
   .skills {
     &__group {
       &-name {
@@ -129,7 +131,7 @@ export default {
   }
 }
 
-@media (max-width : 900px) {
+@media (max-width: 900px) {
   .profile {
     margin-top: 30px;
     justify-content: center;
@@ -145,7 +147,7 @@ export default {
   }
 }
 
-@media (max-width : 700px) {
+@media (max-width: 700px) {
   .skills__progress {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -153,7 +155,7 @@ export default {
   }
 }
 
-@media (max-width : 420px) {
+@media (max-width: 420px) {
   .skills__progress {
     grid-template-columns: repeat(2, 1fr);
   }
