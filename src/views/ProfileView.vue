@@ -16,6 +16,7 @@ export default {
           { name: 'PHP', progress: 90 },
           { name: 'Laravel', progress: 85 },
           { name: 'C#', progress: 50 },
+          { name: 'Golang', progress: 50 },
           { name: 'VLang', progress: 20 }
         ]
       },
@@ -25,7 +26,7 @@ export default {
           { name: 'Tailwind', progress: 85 },
           { name: 'Alpine.js', progress: 85 },
           { name: 'JavaScript', progress: 75 },
-          { name: 'Vue', progress: 50 }
+          { name: 'Vue', progress: 40 }
         ]
       },
       {
@@ -82,7 +83,7 @@ export default {
   &__inner {
     display: flex;
     flex-direction: column;
-    row-gap: 70px;
+    row-gap: 50px;
   }
 
   &__group {
